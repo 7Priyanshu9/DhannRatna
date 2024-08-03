@@ -151,7 +151,7 @@ declare interface BankInfoProps {
 declare interface HeaderBoxProps {
   type?: "title" | "greeting";
   title: string;
-  subtext: string;
+  others: string;
   user?: string;
 }
 
@@ -204,8 +204,8 @@ declare interface BankTabItemProps {
 
 declare interface TotlaBalanceBoxProps {
   accounts: Account[];
-  totalBanks: number;
-  totalCurrentBalance: number;
+  totalNumberOfBanks: number;
+  totalBalance: number;
 }
 
 declare interface FooterProps {
