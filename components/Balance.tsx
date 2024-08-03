@@ -1,13 +1,14 @@
 
 import CountUp from 'react-countup'
 import IncrementCounter from './IncrementCounter'
+import DonutChart from './DonutChart'
 
 
 const Balance = ({accounts=[],totalNumberOfBanks,totalBalance}:TotlaBalanceBoxProps) => {
   return (
     <section className='total-balance'>
         <div className="total-balance-chart">
-            {/* donut chart here */}
+            <DonutChart accounts={accounts}/>
         </div>
         <div className="flex flex-col gap-6">
             <h2 className="header-2">
@@ -15,11 +16,11 @@ const Balance = ({accounts=[],totalNumberOfBanks,totalBalance}:TotlaBalanceBoxPr
             </h2>
             <div className="flex flex-col flex-center gap-2">
                 <p className='total-balance-label'>Current Balance</p>
-                <p className="total-balance-amount flex-center gap-2">
+                <div className="total-balance-amount flex-center gap-2">
                     
                 <IncrementCounter amount={totalBalance}/>
                  
-                </p>
+                </div>
             </div>
         </div>
     </section>
